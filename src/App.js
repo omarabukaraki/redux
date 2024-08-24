@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useDispatch, useSelector } from "react-redux";
+
+import ColorLabel from "./colorComponent/ColorLabel";
+import AuthButton from "./component/authComponent/AuthButton";
+import AuthLabel from "./component/authComponent/AuthLabel";
+import ChangeColorBtn from "./component/colorComponent/ChangeColorBtn";
+import Btns from "./component/counterComponent/Btns";
+import LabelCounter from "./component/counterComponent/LabelCounter";
+
+
 
 function App() {
+  // 4- access data from store reducer with useSelector/ use to get data
+  // const data = useSelector(state=> state)
+
+  // 5- use to update and change the data 
+  // const dispatchCounter = useDispatch()
+
+  // function incrementFuc(){
+  //   dispatchCounter({type:'increment'});
+  // }
+  // function decrementFuc(){
+  //   dispatchCounter({type:'decrement'});
+  // }
+  // function resetFuc(){
+  //   dispatchCounter({type:''});
+  // }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+     <LabelCounter/>
+     <Btns/>
+     <AuthLabel/>
+     <AuthButton/>
+     <ColorLabel/>
+     <ChangeColorBtn/>
+  </>
+
   );
 }
 
