@@ -8,6 +8,7 @@ export const reducerPost = (state = { isPublish: false, isDelete: false }, actio
         localStorage.setItem('posts',JSON.stringify(dataLocal));
         return { isPublish: true, isDelete: false };
     } if (action.type === DELETE) {
+        localStorage.removeItem('posts')
         return { isPublish: false, isDelete: true };
     }
     return state;
