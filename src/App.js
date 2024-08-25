@@ -1,11 +1,13 @@
 // import { useDispatch, useSelector } from "react-redux";
-
-import ColorLabel from "./colorComponent/ColorLabel";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AuthButton from "./component/authComponent/AuthButton";
 import AuthLabel from "./component/authComponent/AuthLabel";
 import ChangeColorBtn from "./component/colorComponent/ChangeColorBtn";
+import ColorLabel from "./component/colorComponent/ColorLabel";
 import Btns from "./component/counterComponent/Btns";
 import LabelCounter from "./component/counterComponent/LabelCounter";
+import PostPage from "./post_page/PostPage";
+import Home from "./home/Home";
 
 
 
@@ -25,16 +27,22 @@ function App() {
   // function resetFuc(){
   //   dispatchCounter({type:''});
   // }
-  
+
   return (
-  <>
-     <LabelCounter/>
+    <>
+      {/* <LabelCounter/>
      <Btns/>
      <AuthLabel/>
      <AuthButton/>
      <ColorLabel/>
-     <ChangeColorBtn/>
-  </>
+     <ChangeColorBtn/> */}
+      <Router>
+        <Routes>
+          <Route path={"/"} element={<Home/>} />
+          <Route path={"/postPage"} element={<PostPage/>}/>
+        </Routes>
+      </Router>
+    </>
 
   );
 }
