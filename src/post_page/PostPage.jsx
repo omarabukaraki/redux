@@ -9,11 +9,12 @@ const PostPage = () => {
     const [loData , setLoData] = useState();
 
     useEffect(()=>{
-       let localData = data === null ? [] : JSON.parse(data);
+     let localData = data === null ? [] : JSON.parse(data);
       setLoData(localData);
     },[statePost.isPublish,statePost.isDelete]);
    
-     
+    console.log(loData);
+
   return (
     <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center'}}>
         {loData?.map((post,index)=>{
